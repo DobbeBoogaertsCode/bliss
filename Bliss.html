@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bliss — Location-Based Music</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #2e0066, #6a00cc, #b266ff);
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .env {
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .ocean { background: rgba(0, 100, 255, 0.4); }
+    .city { background: rgba(180, 0, 255, 0.4); }
+    .country { background: rgba(0, 200, 100, 0.4); }
+    .sand { background: rgba(255, 220, 0, 0.4); color: black; }
+    .jungle { background: rgba(120, 70, 30, 0.5); }
+    .whitehouse { background: rgba(255, 0, 0, 0.5); }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 12px;
+      background: white;
+      color: purple;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>BLISS</h1>
+  <p>Sounds blending with nature</p>
+  <p>The same melody. A different world.</p>
+</header>
+
+<section>
+  <div class="card">
+    <h2>What is Bliss?</h2>
+    <p>
+      Bliss is a new form of music where the melody stays the same, but the environment changes depending on your location.
+      The world becomes part of the song. © 2026 CREATED BY MISTER DOBBE BOOGAERTS FOR MORE MEANING
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Sound Environments</h2>
+  <div class="grid">
+    <div class="env ocean">🌊 Ocean — Calm waves and wind</div>
+    <div class="env city">🏙️ City — Traffic and voices</div>
+    <div class="env country">🌾 Countryside — Birds and breeze</div>
+    <div class="env sand">🏜️ Sand — Soft wind and silence</div>
+    <div class="env jungle">🌴 Jungle — Dense wildlife sounds</div>
+        <div class="env whitehouse">🏛️ White House — Packed with douchebag and smokin' hot ladies</div>
+
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>Try the Concept</h2>
+    <p>Click to simulate different environments:</p>
+    <button onclick="setEnvironment('ocean')">Ocean</button>
+    <button onclick="setEnvironment('city')">City</button>
+    <button onclick="setEnvironment('country')">Countryside</button>
+    <button onclick="setEnvironment('sand')">Sand</button>
+    <button onclick="setEnvironment('jungle')">Jungle</button>
+    <button onclick="setEnvironment('whitehouse')">White House</button>
+
+  </div>
+</section>
+
+<footer>
+  Bliss © 2026 — A new way to hear the world
+</footer>
+
+<script>
+  function setEnvironment(type) {
+    let message = '';
+
+    switch(type) {
+      case 'ocean':
+        message = '🌊 You are hearing Bliss in the Ocean.';
+        break;
+      case 'city':
+        message = '🏙️ You are hearing Bliss in the City.';
+        break;
+      case 'country':
+        message = '🌾 You are hearing Bliss in the Countryside.';
+        break;
+      case 'sand':
+        message = '🏜️ You are hearing Bliss in the Sand.';
+        break;
+      case 'jungle':
+        message = '🌴 You are hearing Bliss in the Jungle.';
+        break;
+    }
+
+    alert(message);
+  }
+</script>
+
+</body>
+</html>
